@@ -1,0 +1,57 @@
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html,
+body {
+	height: 100%;
+}
+body {
+	font-family: 'Poppins', sans-serif;
+	background-color: #1a1d24;
+	color: #fff;
+	display: grid;
+	place-items: center;
+	overflow: hidden;
+}
+/* ======================== */
+.search {
+	display: inline-flex;
+	align-items: center;
+	background: rgb(0,99,173);
+background: linear-gradient(90deg, rgba(0,99,173,1) 0%, rgba(54,9,121,1) 7%, rgba(0,237,255,1) 100%);
+	color: #fff;
+	padding: 10px;
+	border-radius: 4px;
+}
+
+ :is(input, button) {
+	background: transparent;
+	color: inherit;
+	border: none;
+	outline: none;
+}
+.search__input {
+	width: 0;
+	transition: width 0.5s;
+}
+.search__button {
+	display: grid;
+	place-items: center;
+	width: 25px;
+	height: 25px;
+	cursor: pointer;
+	transition: color 0.25s;
+}
+.search__button:hover {
+	color: #e3e3e3;
+}
+ .search:focus-within input {            /* <-------  main*/
+	width: 200px;
+}
+::placeholder {
+	font: inherit;
+	color: #e3e3e3;
+}
